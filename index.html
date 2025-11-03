@@ -173,16 +173,111 @@
     </div>
   </footer>
 
+  <!-- Contact Form Section -->
+  <section class="contact-form-section" style="display: none; padding: 2rem; background-color: #f8f9fa; border-top: 1px solid #e0e0e0;">
+    <div class="container" style="max-width: 600px; margin: 0 auto;">
+      <h2 style="margin-bottom: 1.5rem; color: #722856;">Contact Us</h2>
+      <form action="https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWGithubmessagingSetti1757683932325/services/apexrest/CaseAPI/" method="POST" class="contact-form" style="display: grid; gap: 1rem;">
+        
+        <div class="form-group">
+          <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Contact Name *</label>
+          <input id="name" name="name" type="text" maxlength="80" required 
+                 style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;" />
+        </div>
+
+        <div class="form-group">
+          <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email *</label>
+          <input id="email" name="email" type="email" maxlength="80" required 
+                 style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Phone</label>
+          <input id="phone" name="phone" type="tel" maxlength="40" 
+                 style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;" />
+        </div>
+
+        <div class="form-group">
+          <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Subject *</label>
+          <input id="subject" name="subject" type="text" maxlength="80" required 
+                 style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;" />
+        </div>
+
+        <div class="form-group">
+          <label for="description" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Description *</label>
+          <textarea id="description" name="description" rows="4" required 
+                    style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="priority" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Priority</label>
+          <select id="priority" name="priority" 
+                  style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            <option value="">--Select Priority--</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="type" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Type</label>
+          <select id="type" name="type" 
+                  style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            <option value="">--Select Type--</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Electronic">Electronic</option>
+            <option value="Structural">Structural</option>
+            <option value="Other">Other</option>
+            <option value="Legal">Legal</option>
+            <option value="Support">Support</option>
+          </select>
+        </div>
+
+        <input type="hidden" id="external" name="external" value="1" />
+
+        <div class="form-group" style="margin-top: 1rem;">
+          <input type="submit" name="submit" value="Submit" 
+                 style="background-color: #722856; color: white; padding: 0.75rem 2rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s;" 
+                 onmouseover="this.style.backgroundColor='#5a1e42'" 
+                 onmouseout="this.style.backgroundColor='#722856'" />
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Form Toggle Script -->
+  <script type='text/javascript'>
+    // Toggle contact form visibility
+    function toggleContactForm() {
+      const contactForm = document.querySelector('.contact-form-section');
+      if (contactForm) {
+        const isVisible = contactForm.style.display !== 'none';
+        contactForm.style.display = isVisible ? 'none' : 'block';
+      }
+    }
+
+    // Add contact form toggle functionality to help button
+    document.addEventListener('DOMContentLoaded', function() {
+      const helpBtn = document.querySelector('.help-btn');
+      if (helpBtn) {
+        helpBtn.addEventListener('click', toggleContactForm);
+        helpBtn.setAttribute('title', 'Toggle Contact Form');
+      }
+    });
+  </script>
+
   <!-- Embedded Messaging Scripts -->
   <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
- 
+
 			embeddedservice_bootstrap.init(
 				'00DgL00000B9FRJ',
-				'Cameron_Neso_Site_2',
-				'https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWCameronNesoSite21762187382658',
+				'Github_messaging_Setting',
+				'https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWGithubmessagingSetti1757683932325',
 				{
 					scrt2URL: 'https://orgfarm-77786f1948-dev-ed.develop.my.salesforce-scrt.com'
 				}
@@ -192,48 +287,6 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWCameronNesoSite21762187382658/assets/js/bootstrap.min.js%27 onload='initEmbeddedMessaging()'></script>
-  <!-- Contact Form -->
-  <form action="https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWGithubmessagingSetti1757683932325/services/apexrest/CaseAPI/" method="POST">
-    <label for="name">Contact Name</label>
-    <input id="name" maxlength="80" name="name" size="20" type="text" /><br>
-
-    <label for="email">Email</label>
-    <input id="email" maxlength="80" name="email" size="20" type="text" /><br>
-
-    <label for="phone">Phone</label>
-    <input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
-
-    <label for="subject">Subject</label>
-    <input id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
-
-    <label for="description">Description</label>
-    <textarea name="description"></textarea><br>
-
-    <label for="priority">Priority</label>
-    <select id="priority" name="priority">
-      <option value="">--None--</option>
-      <option value="High">High</option>
-      <option value="Medium">Medium</option>
-      <option value="Low">Low</option>
-    </select><br>
-
-    <label for="type">Type</label>
-    <select id="type" name="type">
-      <option value="">--None--</option>
-      <option value="Mechanical">Mechanical</option>
-      <option value="Electrical">Electrical</option>
-      <option value="Electronic">Electronic</option>
-      <option value="Structural">Structural</option>
-      <option value="Other">Other</option>
-      <option value="Legal">Legal</option>
-      <option value="Support">Support</option>
-    </select><br>
-
-    <input type="hidden" id="external" name="external" value="1" />
-
-    <input type="submit" name="submit" value="Submit">
-  </form>
-
+<script type='text/javascript' src='https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWGithubmessagingSetti1757683932325/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
