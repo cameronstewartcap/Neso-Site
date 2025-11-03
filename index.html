@@ -175,24 +175,24 @@
 
   <!-- Embedded Messaging Scripts -->
   <script type='text/javascript'>
-      function initEmbeddedMessaging() {
-          try {
-              embeddedservice_bootstrap.settings.language = 'en_US';
-              embeddedservice_bootstrap.init(
-                  '00DgL00000B9FRJ',
-                  'Github_messaging_Setting',
-                  'https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWGithubmessagingSetti1757683932325',
-                  {
-                      scrt2URL: 'https://orgfarm-77786f1948-dev-ed.develop.my.salesforce-scrt.com'
-                  }
-              );
-          } catch (err) {
-              console.error('Error loading Embedded Messaging: ', err);
-          }
-      };
-  </script>
-  <script type='text/javascript' src='https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWGithubmessagingSetti1757683932325/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+ 
+			embeddedservice_bootstrap.init(
+				'00DgL00000B9FRJ',
+				'Cameron_Neso_Site_2',
+				'https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWCameronNesoSite21762187382658',
+				{
+					scrt2URL: 'https://orgfarm-77786f1948-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWCameronNesoSite21762187382658/assets/js/bootstrap.min.js%27 onload='initEmbeddedMessaging()'></script>
   <!-- Contact Form -->
   <form action="https://orgfarm-77786f1948-dev-ed.develop.my.site.com/ESWGithubmessagingSetti1757683932325/services/apexrest/CaseAPI/" method="POST">
     <label for="name">Contact Name</label>
